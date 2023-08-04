@@ -34,7 +34,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
 class TaskSerializers(serializers.ModelSerializer):
-    user = UserSerializer(read_only=True)
+    
     class Meta:
         model = TaskCreation 
-        fields = ['id','user','title','description']       
+        fields = ['id','title','description']       
